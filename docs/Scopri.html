@@ -1,81 +1,124 @@
 <html lang="it">
  <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <title>
-   Università Degli Studi Di Salerno
-  </title>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>Università Degli Studi Di Salerno</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&amp;family=Open+Sans&amp;display=swap" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link
+   href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&amp;family=Open+Sans&amp;display=swap"
+   rel="stylesheet"
+  />
+  <link
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+   rel="stylesheet"
+  />
   <style>
-   html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      width: 100vw;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #fff;
-      font-family: 'Open Sans', sans-serif;
-      color: #3c1f14;
-      overflow: hidden;
-   }
+   html,
    body {
-      max-width: 420px; /* max width for vertical mobile ratio */
-      aspect-ratio: 9 / 16;
-      border-radius: 24px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      position: relative;
-      overflow: hidden;
-   }
-   h1 {
-      font-family: 'Montserrat', sans-serif;
-   }
-   /* Hide scrollbar for Chrome, Safari and Opera */
-   .no-scrollbar::-webkit-scrollbar {
-      display: none;
-   }
-   /* Hide scrollbar for IE, Edge and Firefox */
-   .no-scrollbar {
-      -ms-overflow-style: none;  /* IE and Edge */
-      scrollbar-width: none;  /* Firefox */
-   }
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    font-family: "Open Sans", sans-serif;
+    color: #3c1f14;
+    overflow: hidden;
+  }
+  body {
+    max-width: 420px;
+    max-height: 720px;
+    aspect-ratio: 9 / 16;
+    border-radius: 24px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+  }
+  h1 {
+    font-family: "Montserrat", sans-serif;
+  }
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
   </style>
  </head>
  <body>
   <div class="relative w-full h-full overflow-hidden rounded-3xl select-none">
-   <img alt="Building with red neon sign 'dnis a.it' and illuminated windows at night, vertical full screen" class="absolute inset-0 w-full h-full object-cover" src="https://storage.googleapis.com/a1aa/image/9500608e-54c5-40d8-1c25-7894def3ff5c.jpg"/>
+   <img
+    alt="Building with red neon sign 'dnis a.it' and illuminated windows at night, vertical full screen"
+    class="absolute inset-0 w-full h-full object-cover"
+    src="https://storage.googleapis.com/a1aa/image/9500608e-54c5-40d8-1c25-7894def3ff5c.jpg"
+   />
    <!-- Left arrow circle -->
-   <button id="backBtn" aria-label="Go back" class="absolute top-8 left-6 bg-white w-14 h-14 rounded-full flex items-center justify-center text-[#3c1f14] text-xl shadow-md z-30 cursor-pointer">
+   <button
+    id="backBtn"
+    aria-label="Go back"
+    class="absolute top-8 left-6 bg-white w-14 h-14 rounded-full flex items-center justify-center text-[#3c1f14] text-xl shadow-md z-30 cursor-pointer"
+   >
     <i class="fas fa-chevron-left"></i>
    </button>
    <!-- Right side vertical buttons -->
    <div class="absolute top-[33%] right-6 flex flex-col space-y-6 z-30">
-    <button id="likeBtn" aria-label="Like" class="bg-white w-14 h-14 rounded-full flex items-center justify-center text-[#3c1f14] text-xl shadow-md transition-colors duration-200 cursor-pointer">
+    <button
+     id="likeBtn"
+     aria-label="Like"
+     class="bg-white w-14 h-14 rounded-full flex items-center justify-center text-[#3c1f14] text-xl shadow-md transition-colors duration-200 cursor-pointer"
+    >
      <i class="far fa-heart"></i>
     </button>
-    <button aria-label="Share" class="bg-white w-14 h-14 rounded-full flex items-center justify-center text-[#3c1f14] text-xl shadow-md cursor-pointer">
+    <button
+     aria-label="Share"
+     class="bg-white w-14 h-14 rounded-full flex items-center justify-center text-[#3c1f14] text-xl shadow-md cursor-pointer"
+    >
      <i class="fas fa-share-alt"></i>
     </button>
-    <button aria-label="Confirm" class="bg-white w-14 h-14 rounded-full flex items-center justify-center text-[#3c1f14] text-xl shadow-md cursor-pointer">
+    <button
+     aria-label="Confirm"
+     class="bg-white w-14 h-14 rounded-full flex items-center justify-center text-[#3c1f14] text-xl shadow-md cursor-pointer"
+    >
      <i class="fas fa-check"></i>
     </button>
    </div>
    <!-- Comment bubble -->
-   <div class="absolute bottom-[128px] left-6 flex items-center space-x-4 bg-[#f3c9c7] rounded-2xl px-6 py-4 max-w-[75%] z-30">
-    <div aria-hidden="true" class="w-14 h-14 rounded-full bg-[#8fa6b8] flex-shrink-0"></div>
+   <div
+    class="absolute bottom-[128px] left-6 flex items-center space-x-4 bg-[#f3c9c7] rounded-2xl px-6 py-4 max-w-[75%] z-30"
+   >
+    <div
+     aria-hidden="true"
+     class="w-14 h-14 rounded-full bg-[#8fa6b8] flex-shrink-0"
+    ></div>
     <div>
-     <p class="font-semibold text-[#3c1f14] text-base leading-snug">Dicono del luogo:</p>
-     <p class="text-[#6b3a2a] text-sm leading-relaxed">Ottimo posto da visitare!</p>
+     <p class="font-semibold text-[#3c1f14] text-base leading-snug">
+      Dicono del luogo:
+     </p>
+     <p class="text-[#6b3a2a] text-sm leading-relaxed">
+      Ottimo posto da visitare!
+     </p>
     </div>
    </div>
    <!-- Info box with draggable bar -->
-   <div id="infoBox" class="absolute bottom-0 left-0 w-full bg-white bg-opacity-95 rounded-t-3xl p-4 text-[#3c1f14] font-sans z-30 max-h-[7rem] overflow-y-auto no-scrollbar transition-[max-height] duration-300 ease-in-out cursor-pointer">
-    <div id="dragBar" class="w-12 h-1.5 bg-gray-400 rounded-full mx-auto mb-3"></div>
-    <h1 class="text-lg font-semibold mb-2 leading-tight truncate">Università Degli Studi Di Salerno</h1>
-    <div class="flex items-center space-x-4 mb-2 text-[#3c1f14] text-sm font-semibold">
+   <div
+    id="infoBox"
+    class="absolute bottom-0 left-0 w-full bg-white bg-opacity-95 rounded-t-3xl p-4 text-[#3c1f14] font-sans z-30 max-h-[7rem] overflow-y-auto no-scrollbar transition-[max-height] duration-300 ease-in-out cursor-pointer"
+   >
+    <div
+     id="dragBar"
+     class="w-12 h-1.5 bg-gray-400 rounded-full mx-auto mb-3"
+    ></div>
+    <h1 class="text-lg font-semibold mb-2 leading-tight truncate">
+     Università Degli Studi Di Salerno
+    </h1>
+    <div
+     class="flex items-center space-x-4 mb-2 text-[#3c1f14] text-sm font-semibold"
+    >
      <div class="flex items-center space-x-1">
       <i class="far fa-star text-base"></i>
       <span>500pt.</span>
@@ -85,67 +128,72 @@
       <span>20 min</span>
      </div>
     </div>
-    <p class="text-[#6b3a2a] text-sm leading-snug line-clamp-3" id="infoText">
-     L'Università degli Studi di Salerno è una università statale italiana fondata nel 1968 a Salerno e con attuale sede principale a Fisciano, in provincia di Salerno.
+    <p
+     class="text-[#6b3a2a] text-sm leading-snug line-clamp-3"
+     id="infoText"
+    >
+     L'Università degli Studi di Salerno è una università statale italiana
+     fondata nel 1968 a Salerno e con attuale sede principale a Fisciano, in
+     provincia di Salerno.
     </p>
    </div>
   </div>
   <script>
-   const infoBox = document.getElementById('infoBox');
-   const dragBar = document.getElementById('dragBar');
-   const likeBtn = document.getElementById('likeBtn');
-   const backBtn = document.getElementById('backBtn');
-   const infoText = document.getElementById('infoText');
+   const infoBox = document.getElementById("infoBox");
+   const dragBar = document.getElementById("dragBar");
+   const likeBtn = document.getElementById("likeBtn");
+   const backBtn = document.getElementById("backBtn");
+   const infoText = document.getElementById("infoText");
 
    let expanded = false;
    let liked = false;
 
    // Toggle info box expand/collapse on dragBar or infoBox click
    function toggleInfoBox() {
-     if (expanded) {
-       // Collapse
-       infoBox.style.maxHeight = '7rem'; // ~28 (4*16 + padding)
-       infoText.classList.add('line-clamp-3');
-       expanded = false;
-     } else {
-       // Expand
-       infoBox.style.maxHeight = '60vh';
-       infoText.classList.remove('line-clamp-3');
-       expanded = true;
-     }
+    if (expanded) {
+     // Collapse
+     infoBox.style.maxHeight = "7rem"; // ~28 (4*16 + padding)
+     infoText.classList.add("line-clamp-3");
+     expanded = false;
+    } else {
+     // Expand
+     infoBox.style.maxHeight = "60vh";
+     infoText.classList.remove("line-clamp-3");
+     expanded = true;
+    }
    }
 
-   dragBar.addEventListener('click', (e) => {
-     e.stopPropagation();
-     toggleInfoBox();
+   dragBar.addEventListener("click", (e) => {
+    e.stopPropagation();
+    toggleInfoBox();
    });
 
-   infoBox.addEventListener('click', (e) => {
-     if (e.target !== dragBar) {
-       toggleInfoBox();
-     }
+   infoBox.addEventListener("click", (e) => {
+    if (e.target !== dragBar) {
+     toggleInfoBox();
+    }
    });
 
    // Like button toggle
-   likeBtn.addEventListener('click', (e) => {
-     e.stopPropagation();
-     liked = !liked;
-     const icon = likeBtn.querySelector('i');
-     if (liked) {
-       icon.classList.remove('far');
-       icon.classList.add('fas');
-       likeBtn.classList.add('text-red-600');
-     } else {
-       icon.classList.remove('fas');
-       icon.classList.add('far');
-       likeBtn.classList.remove('text-red-600');
-     }
+   likeBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    liked = !liked;
+    const icon = likeBtn.querySelector("i");
+    if (liked) {
+     icon.classList.remove("far");
+     icon.classList.add("fas");
+     likeBtn.classList.add("text-red-600");
+    } else {
+     icon.classList.remove("fas");
+     icon.classList.add("far");
+     likeBtn.classList.remove("text-red-600");
+    }
    });
 
    // Back button navigation
-   backBtn.addEventListener('click', (e) => {
-     e.stopPropagation();
-     window.location.href = 'index.html';
+   backBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    window.location.href = "index.html";
    });
   </script>
  </body>
