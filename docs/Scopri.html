@@ -13,18 +13,21 @@
       margin: 0;
       padding: 0;
       height: 100%;
-      font-family: 'Open Sans', sans-serif;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       background-color: #fff;
+      font-family: 'Open Sans', sans-serif;
       color: #3c1f14;
       overflow: hidden;
-      width: 375px;
-      height: 667px;
    }
    body {
-      position: relative;
-      margin: 0 auto;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 420px; /* max width for vertical mobile ratio */
+      aspect-ratio: 9 / 16;
       border-radius: 24px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      position: relative;
       overflow: hidden;
    }
    h1 {
@@ -42,7 +45,7 @@
   </style>
  </head>
  <body>
-  <div class="relative w-[375px] h-[667px] overflow-hidden rounded-3xl select-none">
+  <div class="relative w-full h-full overflow-hidden rounded-3xl select-none">
    <img alt="Building with red neon sign 'dnis a.it' and illuminated windows at night, vertical full screen" class="absolute inset-0 w-full h-full object-cover" src="https://storage.googleapis.com/a1aa/image/9500608e-54c5-40d8-1c25-7894def3ff5c.jpg"/>
    <!-- Left arrow circle -->
    <button id="backBtn" aria-label="Go back" class="absolute top-8 left-6 bg-white w-14 h-14 rounded-full flex items-center justify-center text-[#3c1f14] text-xl shadow-md z-30 cursor-pointer">
