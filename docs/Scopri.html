@@ -13,83 +13,55 @@
    rel="stylesheet"
   />
   <style>
-   html,
+   @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap");
    body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
     font-family: "Open Sans", sans-serif;
-    color: #3c1f14;
-    overflow: hidden;
-  }
-  body {
-    max-width: 420px;
-    max-height: 720px;
-    aspect-ratio: 9 / 16;
-    border-radius: 24px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
-    position: relative;
-    overflow: hidden;
-  }
-  h1 {
-    font-family: "Montserrat", sans-serif;
-  }
-  /* Hide scrollbar for Chrome, Safari and Opera */
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-  /* Hide scrollbar for IE, Edge and Firefox */
-  .no-scrollbar {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-  }
+   }
   </style>
  </head>
- <body>
-  <div class="relative w-full h-full overflow-hidden rounded-3xl select-none">
+ <body
+  class="min-h-screen bg-white flex flex-col rounded-3xl overflow-hidden max-w-md mx-auto"
+  style="max-height: 900px;"
+ >
+  <div class="relative flex-1 rounded-3xl overflow-hidden">
    <img
-    alt="Building with red neon sign 'dnis a.it' and illuminated windows at night, vertical full screen"
-    class="absolute inset-0 w-full h-full object-cover"
+    alt="Building with red neon sign 'dnis a.it' and illuminated windows at night"
+    class="w-full h-full object-cover"
     src="https://storage.googleapis.com/a1aa/image/9500608e-54c5-40d8-1c25-7894def3ff5c.jpg"
    />
    <!-- Left arrow circle -->
    <button
     id="backBtn"
     aria-label="Go back"
-    class="absolute top-8 left-6 bg-white w-14 h-14 rounded-full flex items-center justify-center text-[#3c1f14] text-xl shadow-md z-30 cursor-pointer"
+    class="absolute top-6 left-6 bg-white w-14 h-14 rounded-full flex items-center justify-center text-[#3c1f14] text-xl shadow-md z-20"
    >
     <i class="fas fa-chevron-left"></i>
    </button>
    <!-- Right side vertical buttons -->
-   <div class="absolute top-[33%] right-6 flex flex-col space-y-6 z-30">
+   <div class="absolute top-1/3 right-6 flex flex-col space-y-6 z-20">
     <button
      id="likeBtn"
      aria-label="Like"
-     class="bg-white w-14 h-14 rounded-full flex items-center justify-center text-[#3c1f14] text-xl shadow-md transition-colors duration-200 cursor-pointer"
+     class="bg-white w-14 h-14 rounded-full flex items-center justify-center text-[#3c1f14] text-xl shadow-md transition-colors duration-200"
     >
      <i class="far fa-heart"></i>
     </button>
     <button
      aria-label="Share"
-     class="bg-white w-14 h-14 rounded-full flex items-center justify-center text-[#3c1f14] text-xl shadow-md cursor-pointer"
+     class="bg-white w-14 h-14 rounded-full flex items-center justify-center text-[#3c1f14] text-xl shadow-md"
     >
      <i class="fas fa-share-alt"></i>
     </button>
     <button
      aria-label="Confirm"
-     class="bg-white w-14 h-14 rounded-full flex items-center justify-center text-[#3c1f14] text-xl shadow-md cursor-pointer"
+     class="bg-white w-14 h-14 rounded-full flex items-center justify-center text-[#3c1f14] text-xl shadow-md"
     >
      <i class="fas fa-check"></i>
     </button>
    </div>
    <!-- Comment bubble -->
    <div
-    class="absolute bottom-[128px] left-6 flex items-center space-x-4 bg-[#f3c9c7] rounded-2xl px-6 py-4 max-w-[75%] z-30"
+    class="absolute bottom-32 left-6 flex items-center space-x-4 bg-[#f3c9c7] rounded-2xl px-6 py-4 max-w-[75%] z-20"
    >
     <div
      aria-hidden="true"
@@ -107,31 +79,28 @@
    <!-- Info box with draggable bar -->
    <div
     id="infoBox"
-    class="absolute bottom-0 left-0 w-full bg-white bg-opacity-95 rounded-t-3xl p-4 text-[#3c1f14] font-sans z-30 max-h-[7rem] overflow-y-auto no-scrollbar transition-[max-height] duration-300 ease-in-out cursor-pointer"
+    class="absolute bottom-0 left-0 w-full bg-white bg-opacity-95 rounded-t-3xl p-6 text-[#3c1f14] font-sans z-20 max-h-[60%] overflow-y-auto no-scrollbar transition-[max-height] duration-300 ease-in-out cursor-pointer"
    >
     <div
      id="dragBar"
-     class="w-12 h-1.5 bg-gray-400 rounded-full mx-auto mb-3"
+     class="w-12 h-1.5 bg-gray-400 rounded-full mx-auto mb-3 cursor-pointer"
     ></div>
-    <h1 class="text-lg font-semibold mb-2 leading-tight truncate">
+    <h1 class="text-xl font-semibold mb-3 leading-tight">
      Università Degli Studi Di Salerno
     </h1>
     <div
-     class="flex items-center space-x-4 mb-2 text-[#3c1f14] text-sm font-semibold"
+     class="flex items-center space-x-6 mb-4 text-[#3c1f14] text-lg font-semibold"
     >
-     <div class="flex items-center space-x-1">
-      <i class="far fa-star text-base"></i>
+     <div class="flex items-center space-x-2">
+      <i class="far fa-star"></i>
       <span>500pt.</span>
      </div>
-     <div class="flex items-center space-x-1">
-      <i class="far fa-clock text-base"></i>
+     <div class="flex items-center space-x-2">
+      <i class="far fa-clock"></i>
       <span>20 min</span>
      </div>
     </div>
-    <p
-     class="text-[#6b3a2a] text-sm leading-snug line-clamp-3"
-     id="infoText"
-    >
+    <p class="text-[#6b3a2a] text-base leading-relaxed line-clamp-5" id="infoText">
      L'Università degli Studi di Salerno è una università statale italiana
      fondata nel 1968 a Salerno e con attuale sede principale a Fisciano, in
      provincia di Salerno.
@@ -145,19 +114,23 @@
    const backBtn = document.getElementById("backBtn");
    const infoText = document.getElementById("infoText");
 
-   let expanded = false;
+   let expanded = true;
    let liked = false;
+
+   // Initialize expanded state
+   infoBox.style.maxHeight = "60%";
+   infoText.classList.remove("line-clamp-3");
 
    // Toggle info box expand/collapse on dragBar or infoBox click
    function toggleInfoBox() {
     if (expanded) {
      // Collapse
-     infoBox.style.maxHeight = "7rem"; // ~28 (4*16 + padding)
+     infoBox.style.maxHeight = "7rem";
      infoText.classList.add("line-clamp-3");
      expanded = false;
     } else {
      // Expand
-     infoBox.style.maxHeight = "60vh";
+     infoBox.style.maxHeight = "60%";
      infoText.classList.remove("line-clamp-3");
      expanded = true;
     }
