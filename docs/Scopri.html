@@ -22,9 +22,8 @@
   <div class="relative flex-1 rounded-3xl overflow-hidden">
     <img
       alt="Building with red neon sign 'dnis a.it' and illuminated windows at night"
-      class="w-full h-auto object-cover"
+      class="w-full h-48 object-cover" <!-- Imposta un'altezza fissa per l'immagine -->
       src="https://storage.googleapis.com/a1aa/image/9500608e-54c5-40d8-1c25-7894def3ff5c.jpg"
-      style="max-height: 300px;" <!-- Imposta un'altezza massima per l'immagine -->
     />
     <!-- Left arrow circle -->
     <button
@@ -67,13 +66,13 @@
     <!-- Info box with draggable bar -->
     <div
       id="infoBox"
-      class="absolute bottom-0 left-0 w-full bg-white bg-opacity-95 rounded-t-3xl p-6 text-[#3c1f14] font-sans z-20 max-h-[60%] overflow-y-auto no-scrollbar transition-[max-height] duration-300 ease-in-out cursor-pointer"
+      class="absolute bottom-0 left-0 w-full bg-white bg-opacity-95 rounded-t-3xl p-6 text-[#3c1f14] font-sans z-20 max-h-[40%] overflow-y-auto no-scrollbar transition-[max-height] duration-300 ease-in-out cursor-pointer"
     >
-      <div id="dragBar" class="w-12h-1.5 bg-gray-400 rounded-full mx-auto mb-3 cursor-pointer"></div>
+      <div id="dragBar" class="w-12 h-1.5 bg-gray-400 rounded-full mx-auto mb-3 cursor-pointer"></div>
       <h1 class="text-xl font-semibold mb-3 leading-tight">Università Degli Studi Di Salerno</h1>
       <div class="flex items-center space-x-6 mb-4 text-[#3c1f14] text-lg font-semibold">
         <div class="flex items-center space-x-2">
-          <i class="far fa-star"></i>
+ <i class="far fa-star"></i>
           <span>500pt.</span>
         </div>
         <div class="flex items-center space-x-2">
@@ -99,7 +98,7 @@
     let liked = false;
 
     // Initialize expanded state
-    infoBox.style.maxHeight = "60%";
+    infoBox.style.maxHeight = "40%"; // Imposta un'altezza massima per il box delle informazioni
     infoText.classList.remove("line-clamp-3");
 
     // Toggle info box expand/collapse on dragBar or infoBox click
@@ -111,7 +110,7 @@
         expanded = false;
       } else {
         // Expand
-        infoBox.style.maxHeight = "60%";
+        infoBox.style.maxHeight = "40%";
         infoText.classList.remove("line-clamp-3");
         expanded = true;
       }
@@ -151,4 +150,4 @@
     });
   </script>
 </body>
-</html>
+</html>        
