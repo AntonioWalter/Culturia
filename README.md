@@ -20,8 +20,8 @@ Il progetto nasce all'interno dell'Hackathon DiCultHer 2025 come proposta innova
 
 ## 👥 Chi siamo
 
-- [Antonio Walter De Fusco]()
-- [Emmanuel De Luca]()
+- [Antonio Walter De Fusco](https://www.linkedin.com/in/antonio-walter-de-fusco/)
+- [Emmanuel De Luca](https://www.linkedin.com/in/emmanuel-de-luca/)
 - Gabriele di Palma
 
 Siamo un team di studenti appassionati dell'Università degli studi di Salerno, nel corso di Laurea Triennale di Informatica. 
