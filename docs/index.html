@@ -1,55 +1,55 @@
 <html lang="en">
- <head>
+<head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <title>
-   Culturia
-  </title>
+  <title>Culturia</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
   <style>
-   @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-   body {
-     font-family: 'Inter', sans-serif;
-   }
-   .marker {
-     position: absolute;
-     top: 50%;
-     left: 50%;
-     transform: translate(-50%, -50%);
-     color: red;
-     font-size: 2rem; /* Dimensione dell'icona */
-   }
+    @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .marker {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: red;
+      font-size: 2rem; /* Dimensione dell'icona */
+    }
   </style>
- </head>
- <body class="bg-white flex justify-center items-center min-h-screen p-4">
+</head>
+<body class="bg-white flex justify-center items-center min-h-screen p-4">
   <div class="w-full max-w-md h-[900px] rounded-3xl overflow-hidden flex flex-col bg-white shadow-lg">
-   <div class="relative flex-1 rounded-t-3xl overflow-hidden">
-    <img alt="Satellite aerial view of a city with roads, buildings, and greenery" class="w-full h-full object-cover" height="900" src="https://storage.googleapis.com/a1aa/image/0468c6ca-a9f4-4e04-6ce7-acb585e06aa0.jpg" width="720"/>
-    <i class="fas fa-map-marker-alt marker"></i> <!-- Icona di indicatore di posizione -->
-    <form aria-label="Search location" class="absolute top-6 left-6 right-6 bg-white rounded-xl flex items-center px-4 py-3 shadow-lg" role="search">
-     <i class="fas fa-search text-[#3B1F1F] text-xl"></i>
-     <input aria-label="Search input" class="ml-3 w-full text-[#3B1F1F] text-lg font-normal placeholder-[#3B1F1F] focus:outline-none bg-transparent" placeholder="Search" type="search"/>
-    </form>
-    <button aria-label="AI button" class="absolute top-28 right-6 bg-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg">
-     <i class="fas fa-robot text-[#3B1F1F] text-2xl"></i>
-    </button>
-   </div>
-   <nav aria-label="Bottom navigation" class="bg-white rounded-b-3xl flex justify-around items-center py-5 shadow-inner" role="navigation">
-    <a aria-label="Video" class="text-[#3B1F1F] text-2xl flex flex-col items-center" href="Scopri.html">
-     <i class="fas fa-video"></i>
-     <span class="text-base mt-1"></span>
-    </a>
-    <a aria-label="Library" class="text-[#3B1F1F] text-2xl flex flex-col items-center" href="Diario.html">
-     <i class="fas fa-book-open"></i>
-    </a>
-    <a aria-label="Notifications" class="text-[#3B1F1F] text-2xl flex flex-col items-center" href="Notifiche.html">
-     <i class="fas fa-bell"></i>
-    </a>
-    <a aria-label="Profile" class="text-[#3B1F1F] text-2xl flex flex-col items-center" href="Profilo.html">
-     <i class="fas fa-user"></i>
-    </a>
-   </nav>
+    <div class="relative flex-1 rounded-t-3xl overflow-hidden">
+      <img alt="Satellite aerial view of a city with roads, buildings, and greenery" class="w-full h-full object-cover" height="900" src="https://storage.googleapis.com/a1aa/image/0468c6ca-a9f4-4e04-6ce7-acb585e06aa0.jpg" width="720"/>
+      <a href="LuogoDiInteresse.html" aria-label="Point of interest" class="marker">
+        <i class="fas fa-map-marker-alt"></i> <!-- Icona di indicatore di posizione -->
+      </a>
+      <form aria-label="Search location" class="absolute top-6 left-6 right-6 bg-white rounded-xl flex items-center px-4 py-3 shadow-lg" role="search">
+        <i class="fas fa-search text-[#3B1F1F] text-xl"></i>
+        <input aria-label="Search input" class="ml-3 w-full text-[#3B1F1F] text-lg font-normal placeholder-[#3B1F1F] focus:outline-none bg-transparent" placeholder="Search" type="search"/>
+      </form>
+      <button aria-label="AI button" class="absolute top-28 right-6 bg-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg">
+        <i class="fas fa-robot text-[#3B1F1F] text-2xl"></i>
+      </button>
+    </div>
+    <nav aria-label="Bottom navigation" class="bg-white rounded-b-3xl flex justify-around items-center py-5 shadow-inner" role="navigation">
+      <a aria-label="Video" class="text-[#3B1F1F] text-2xl flex flex-col items-center" href="Scopri.html">
+        <i class="fas fa-video"></i>
+        <span class="text-base mt-1"></span>
+      </a>
+      <a aria-label="Library" class="text-[#3B1F1F] text-2xl flex flex-col items-center" href="Diario.html">
+        <i class="fas fa-book-open"></i>
+      </a>
+      <a aria-label="Notifications" class="text-[#3B1F1F] text-2xl flex flex-col items-center" href="Notifiche.html">
+        <i class="fas fa-bell"></i>
+      </a>
+      <a aria-label="Profile" class="text-[#3B1F1F] text-2xl flex flex-col items-center" href="Profilo.html">
+        <i class="fas fa-user"></i>
+      </a>
+    </nav>
   </div>
- </body>
+</body>
 </html>
