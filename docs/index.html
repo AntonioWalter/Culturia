@@ -1,59 +1,33 @@
 <html lang="en">
  <head>
   <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Culturia</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Culturia
+  </title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
   <style>
    @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
    body {
      font-family: 'Inter', sans-serif;
-     @apply bg-gray-100 flex justify-center items-center min-h-screen overflow-hidden;
-   }
-   .app-container {
-     width: 390px; /* standard mobile width */
-     height: 844px; /* standard mobile height */
-     background-color: white;
-     border-radius: 1.5rem;
-     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-     overflow: hidden;
-     display: flex;
-     flex-direction: column;
-   }
-   @media (max-width: 400px) {
-     .app-container {
-       width: 100vw;
-       height: 100vh;
-       border-radius: 0;
-     }
    }
   </style>
  </head>
- <body>
-  <div class="app-container">
-   <div class="relative flex-1 overflow-hidden">
-    <img 
-      src="https://storage.googleapis.com/a1aa/image/0468c6ca-a9f4-4e04-6ce7-acb585e06aa0.jpg"
-      alt="Satellite aerial view of a city with roads, buildings, and greenery"
-      class="w-full h-full object-cover"
-    />
-    <form aria-label="Search location" role="search"
-      class="absolute top-6 left-6 right-6 bg-white rounded-xl flex items-center px-4 py-3 shadow-lg">
+ <body class="bg-white flex justify-center items-center min-h-screen p-4">
+  <div class="w-full max-w-md h-[900px] rounded-3xl overflow-hidden flex flex-col bg-white shadow-lg">
+   <div class="relative flex-1 rounded-t-3xl overflow-hidden">
+    <img alt="Satellite aerial view of a city with roads, buildings, and greenery" class="w-full h-full object-cover" height="900" src="https://storage.googleapis.com/a1aa/image/0468c6ca-a9f4-4e04-6ce7-acb585e06aa0.jpg" width="720"/>
+    <form aria-label="Search location" class="absolute top-6 left-6 right-6 bg-white rounded-xl flex items-center px-4 py-3 shadow-lg" role="search">
      <i class="fas fa-search text-[#3B1F1F] text-xl"></i>
-     <input type="search" placeholder="Search" 
-      aria-label="Search input"
-      class="ml-3 w-full text-[#3B1F1F] text-lg font-normal placeholder-[#3B1F1F] focus:outline-none bg-transparent"/>
+     <input aria-label="Search input" class="ml-3 w-full text-[#3B1F1F] text-lg font-normal placeholder-[#3B1F1F] focus:outline-none bg-transparent" placeholder="Search" type="search"/>
     </form>
-    <button aria-label="Command button"
-      class="absolute top-28 right-6 bg-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg">
+    <button aria-label="Command button" class="absolute top-28 right-6 bg-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg">
      <i class="fas fa-command text-[#3B1F1F] text-2xl"></i>
     </button>
    </div>
-   <nav aria-label="Bottom navigation" role="navigation"
-     class="bg-white flex justify-around items-center py-5 shadow-inner">
-    <a href="Scopri.html" aria-label="Home"
-      class="text-[#3B1F1F] text-2xl flex flex-col items-center">
+   <nav aria-label="Bottom navigation" class="bg-white rounded-b-3xl flex justify-around items-center py-5 shadow-inner" role="navigation">
+    <a aria-label="Home" class="text-[#3B1F1F] text-2xl flex flex-col items-center" href="Scopri.html">
      <i class="fas fa-home"></i>
      <span class="text-base mt-1"></span>
     </a>
