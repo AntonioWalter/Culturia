@@ -12,29 +12,31 @@
   <style>
    body {
       font-family: "Montserrat", sans-serif;
+      overflow: hidden;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f3f4f6; /* light gray background */
     }
-   /* Container fixed size with no scroll on inner */
    #app-container {
      width: 384px;
      height: 900px;
      border-radius: 1.5rem; /* rounded-3xl */
      box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
      background: white;
-     overflow: hidden;
      display: flex;
      flex-direction: column;
-     justify-content: space-between;
+     overflow: hidden;
    }
-   /* On small screens, full viewport, no border radius, no shadow */
-   @media (max-width: 640px) {
-     #app-container {
-       width: 100vw;
-       height: 100vh;
-       border-radius: 0;
-       box-shadow: none;
-     }
+   #scrollable-content {
+     overflow-y: auto;
+     -webkit-overflow-scrolling: touch;
+     flex-grow: 1;
+     display: flex;
+     flex-direction: column;
    }
-   /* Make image and content scale to fit container height */
    #image-container {
      position: relative;
      flex-shrink: 0;
@@ -49,15 +51,6 @@
      border-radius: 1.5rem 1.5rem 0 0;
      display: block;
    }
-   #content-container {
-     padding: 1rem 1rem 2rem;
-     color: #4B1F14;
-     flex-grow: 1;
-     overflow: hidden;
-     display: flex;
-     flex-direction: column;
-   }
-   /* Top left back button */
    #back-button {
      position: absolute;
      top: 1.5rem;
@@ -75,12 +68,12 @@
      border: none;
      cursor: pointer;
      z-index: 10;
+     text-decoration: none;
    }
    #back-button:focus {
      outline: 2px solid #8B2B1A;
      outline-offset: 2px;
    }
-   /* Top right circle with 3 dots */
    #top-right-circle {
      position: absolute;
      top: 1.5rem;
@@ -105,7 +98,6 @@
      background-color: #4B1F14;
      border-radius: 9999px;
    }
-   /* Bottom icons container */
    #bottom-icons {
      position: absolute;
      bottom: 1.5rem;
@@ -131,7 +123,6 @@
      border: none;
      cursor: pointer;
    }
-   /* Info row */
    #info-row {
      margin-top: 1rem;
      display: flex;
@@ -144,27 +135,23 @@
    #info-row i {
      font-size: 1.5rem;
    }
-   /* Title */
    #title {
      margin-top: 1.5rem;
      font-weight: 800;
      font-size: 1.5rem;
    }
-   /* Description */
    #description {
      margin-top: 1rem;
      font-size: 1.125rem;
      line-height: 1.5rem;
      font-weight: 500;
-     flex-grow: 1;
-     overflow: hidden;
    }
-   /* Buttons container */
    #buttons-container {
      margin-top: 2rem;
      display: flex;
      justify-content: space-between;
      gap: 1rem;
+     padding-bottom: 1rem;
    }
    #buttons-container button {
      background-color: #8B2B1A;
@@ -185,13 +172,25 @@
    #buttons-container button br {
      display: block;
    }
-   /* On small screens, container full screen, no border radius, no shadow */
    @media (max-width: 640px) {
+     body {
+       overflow: auto;
+       height: 100vh;
+     }
      #app-container {
        width: 100vw !important;
        height: 100vh !important;
        border-radius: 0 !important;
        box-shadow: none !important;
+       display: flex;
+       flex-direction: column;
+     }
+     #scrollable-content {
+       overflow-y: auto;
+       -webkit-overflow-scrolling: touch;
+       flex-grow: 1;
+       display: flex;
+       flex-direction: column;
      }
      #image-container {
        height: 35% !important;
@@ -241,6 +240,7 @@
      #buttons-container {
        margin-top: 1.5rem !important;
        gap: 0.75rem !important;
+       padding-bottom: 2rem !important;
      }
      #buttons-container button {
        font-size: 1rem !important;
@@ -251,56 +251,58 @@
    }
   </style>
  </head>
- <body class="bg-gray-100 overflow-hidden flex items-center justify-center min-h-screen">
+ <body>
   <div id="app-container" role="main" aria-label="Chiostro Della Pace app container">
-   <div id="image-container">
-    <img alt="Modern building with blue roof and green grass in front, surrounded by a wooden fence and a signpost in the foreground" height="400" src="https://storage.googleapis.com/a1aa/image/a7bee807-5304-40ef-af00-39811e43c024.jpg" width="600"/>
-    <a href="index.html" id="back-button" aria-label="Back to index page" title="Back to index page">
-     <i class="fas fa-chevron-left" aria-hidden="true"></i>
-    </a>
-    <div id="top-right-circle" aria-label="More options">
-     <div class="dots" role="presentation">
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
+   <div id="scrollable-content">
+    <div id="image-container">
+     <img alt="Modern building with blue roof and green grass in front, surrounded by a wooden fence and a signpost in the foreground" height="400" src="https://storage.googleapis.com/a1aa/image/a7bee807-5304-40ef-af00-39811e43c024.jpg" width="600"/>
+     <a href="index.html" id="back-button" aria-label="Back to index page" title="Back to index page">
+      <i class="fas fa-chevron-left" aria-hidden="true"></i>
+     </a>
+     <div id="top-right-circle" aria-label="More options">
+      <div class="dots" role="presentation">
+       <span class="dot"></span>
+       <span class="dot"></span>
+       <span class="dot"></span>
+      </div>
+     </div>
+     <div id="bottom-icons" role="group" aria-label="Action buttons">
+      <button aria-label="Camera">
+       <i class="fas fa-camera" aria-hidden="true"></i>
+      </button>
+      <button aria-label="Chat">
+       <i class="far fa-comment" aria-hidden="true"></i>
+      </button>
+      <button aria-label="Map">
+       <i class="fas fa-map" aria-hidden="true"></i>
+      </button>
      </div>
     </div>
-    <div id="bottom-icons" role="group" aria-label="Action buttons">
-     <button aria-label="Camera">
-      <i class="fas fa-camera" aria-hidden="true"></i>
-     </button>
-     <button aria-label="Chat">
-      <i class="far fa-comment" aria-hidden="true"></i>
-     </button>
-     <button aria-label="Map">
-      <i class="fas fa-map" aria-hidden="true"></i>
-     </button>
-    </div>
-   </div>
-   <div id="content-container">
-    <div id="info-row">
-     <div class="flex items-center">
-      <i class="far fa-star" aria-hidden="true"></i>
-      <span class="ml-2">500pt.</span>
+    <div id="content-container" style="padding:1rem 1rem 0;">
+     <div id="info-row">
+      <div class="flex items-center">
+       <i class="far fa-star" aria-hidden="true"></i>
+       <span class="ml-2">500pt.</span>
+      </div>
+      <div class="flex items-center">
+       <i class="far fa-clock" aria-hidden="true"></i>
+       <span class="ml-2">20 min</span>
+      </div>
      </div>
-     <div class="flex items-center">
-      <i class="far fa-clock" aria-hidden="true"></i>
-      <span class="ml-2">20 min</span>
+     <h1 id="title" tabindex="0">
+      Chiostro Della Pace
+     </h1>
+     <p id="description" tabindex="0">
+      "Chiostro della Pace", progettato da Ettore Sottsass jr. con sculture di Enzo Cucchi, è uno spazio tra il Rettorato e l'Aula Magna dell'Università di Salerno. Ispirato ai chiostri antichi, valorizza il campus con arte e architettura, promuovendo pace e riflessione. Inaugurato nel 2006, ha ricevuto nel 2008 il Premio PAALMA.
+     </p>
+     <div id="buttons-container">
+      <button type="button" aria-label="Convalida Visita">
+       Convalida<br/>Visita
+      </button>
+      <button type="button" aria-label="Tour Guidato">
+       Tour<br/>Guidato
+      </button>
      </div>
-    </div>
-    <h1 id="title" tabindex="0">
-     Chiostro Della Pace
-    </h1>
-    <p id="description" tabindex="0">
-     "Chiostro della Pace", progettato da Ettore Sottsass jr. con sculture di Enzo Cucchi, è uno spazio tra il Rettorato e l'Aula Magna dell'Università di Salerno. Ispirato ai chiostri antichi, valorizza il campus con arte e architettura, promuovendo pace e riflessione. Inaugurato nel 2006, ha ricevuto nel 2008 il Premio PAALMA.
-    </p>
-    <div id="buttons-container">
-     <button type="button" aria-label="Convalida Visita">
-      Convalida<br/>Visita
-     </button>
-     <button type="button" aria-label="Tour Guidato">
-      Tour<br/>Guidato
-     </button>
     </div>
    </div>
   </div>
