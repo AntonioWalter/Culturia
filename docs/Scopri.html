@@ -4,89 +4,86 @@
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <title>Università Degli Studi Di Salerno</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&amp;family=Open+Sans&amp;display=swap"
-    rel="stylesheet"
-  />
-  <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
   <style>
     body {
       font-family: "Open Sans", sans-serif;
     }
   </style>
 </head>
-<body class="min-h-screen bg-white flex flex-col rounded-3xl overflow-hidden max-w-md mx-auto p-4">
-  <div class="relative flex-1 rounded-3xl overflow-hidden">
-    <img
-      alt="Building with red neon sign 'dnis a.it' and illuminated windows at night"
-      class="w-full h-48 object-cover" <!-- Imposta un'altezza fissa per l'immagine -->
-      src="https://storage.googleapis.com/a1aa/image/9500608e-54c5-40d8-1c25-7894def3ff5c.jpg"
-    />
-    <!-- Left arrow circle -->
-    <button
-      id="backBtn"
-      aria-label="Go back"
-      class="absolute top-6 left-6 bg-white w-14 h-14 rounded-full flex items-center justify-center text-[#3c1f14] text-xl shadow-md z-20"
-    >
-      <i class="fas fa-chevron-left"></i>
-    </button>
-    <!-- Right side vertical buttons -->
-    <div class="absolute top-1/3 right-6 flex flex-col space-y-6 z-20">
+<body class="bg-gray-100 flex justify-center items-center min-h-screen overflow-hidden p-4">
+  <div class="w-full max-w-md h-[900px] rounded-3xl overflow-hidden flex flex-col bg-white shadow-lg">
+    <div class="relative flex-1 rounded-t-3xl overflow-hidden">
+      <img
+        alt="Building with red neon sign 'dnis a.it' and illuminated windows at night"
+        class="w-full h-48 object-cover"
+        src="https://storage.googleapis.com/a1aa/image/9500608e-54c5-40d8-1c25-7894def3ff5c.jpg"
+      />
+      <!-- Left arrow circle -->
       <button
-        id="likeBtn"
-        aria-label="Like"
-        class="bg-white w-14 h-14 rounded-full flex items-center justify-center text-[#3c1f14] text-xl shadow-md transition-colors duration-200"
+        id="backBtn"
+        aria-label="Go back"
+        class="absolute top-6 left-6 bg-white w-14 h-14 rounded-full flex items-center justify-center text-[#3c1f14] text-xl shadow-md z-20"
       >
-        <i class="far fa-heart"></i>
+        <i class="fas fa-chevron-left"></i>
       </button>
-      <button
-        aria-label="Share"
-        class="bg-white w-14 h-14 rounded-full flex items-center justify-center text-[#3c1f14] text-xl shadow-md"
-      >
-        <i class="fas fa-share-alt"></i>
-      </button>
-      <button
-        aria-label="Confirm"
-        class="bg-white w-14 h-14 rounded-full flex items-center justify-center text-[#3c1f14] text-xl shadow-md"
-      >
-        <i class="fas fa-check"></i>
-      </button>
-    </div>
-    <!-- Comment bubble -->
-    <div class="absolute bottom-32 left-6 flex items-center space-x-4 bg-[#f3c9c7] rounded-2xl px-6 py-4 max-w-[75%] z-20">
-      <div aria-hidden="true" class="w-14 h-14 rounded-full bg-[#8fa6b8] flex-shrink-0"></div>
-      <div>
-        <p class="font-semibold text-[#3c1f14] text-base leading-snug">Dicono del luogo:</p>
-        <p class="text-[#6b3a2a] text-sm leading-relaxed">Ottimo posto da visitare!</p>
+      <!-- Right side vertical buttons -->
+      <div class="absolute top-1/3 right-6 flex flex-col space-y-6 z-20">
+        <button
+          id="likeBtn"
+          aria-label="Like"
+          class="bg-white w-14 h-14 rounded-full flex items-center justify-center text-[#3c1f14] text-xl shadow-md transition-colors duration-200"
+        >
+          <i class="far fa-heart"></i>
+        </button>
+        <button
+          aria-label="Share"
+          class="bg-white w-14 h-14 rounded-full flex items-center justify-center text-[#3c1f14] text-xl shadow-md"
+        >
+          <i class="fas fa-share-alt"></i>
+        </button>
+        <button
+          aria-label="Confirm"
+          class="bg-white w-14 h-14 rounded-full flex items-center justify-center text-[#3c1f14] text-xl shadow-md"
+        >
+          <i class="fas fa-check"></i>
+        </button>
       </div>
-    </div>
-    <!-- Info box with draggable bar -->
-    <div
-      id="infoBox"
-      class="absolute bottom-0 left-0 w-full bg-white bg-opacity-95 rounded-t-3xl p-6 text-[#3c1f14] font-sans z-20 max-h-[40%] overflow-y-auto no-scrollbar transition-[max-height] duration-300 ease-in-out cursor-pointer"
-    >
-      <div id="dragBar" class="w-12 h-1.5 bg-gray-400 rounded-full mx-auto mb-3 cursor-pointer"></div>
-      <h1 class="text-xl font-semibold mb-3 leading-tight">Università Degli Studi Di Salerno</h1>
-      <div class="flex items-center space-x-6 mb-4 text-[#3c1f14] text-lg font-semibold">
-        <div class="flex items-center space-x-2">
- <i class="far fa-star"></i>
-          <span>500pt.</span>
-        </div>
-        <div class="flex items-center space-x-2">
-          <i class="far fa-clock"></i>
-          <span>20 min</span>
+      <!-- Comment bubble -->
+      <div class="absolute bottom-32 left-6 flex items-center space-x-4 bg-[#f3c9c7] rounded-2xl px-6 py-4 max-w-[75%] z-20">
+        <div aria-hidden="true" class="w-14 h-14 rounded-full bg-[#8fa6b8] flex-shrink-0"></div>
+        <div>
+          <p class="font-semibold text-[#3c1f14] text-base leading-snug">Dicono del luogo:</p>
+          <p class="text-[#6b3a2a] text-sm leading-relaxed">Ottimo posto da visitare!</p>
         </div>
       </div>
-      <p class="text-[#6b3a2a] text-base leading-relaxed line-clamp-5" id="infoText">
-        L'Università degli Studi di Salerno è una università statale italiana
-        fondata nel 1968 a Salerno e con attuale sede principale a Fisciano, in
-        provincia di Salerno.
-      </p>
+      <!-- Info box with draggable bar -->
+      <div
+        id="infoBox"
+        class="absolute bottom-0 left-0 w-full bg-white bg-opacity-95 rounded-t-3xl p-6 text-[#3c1f14] font-sans z-20 max-h-[40%] overflow-y-auto no-scrollbar transition-[max-height] duration-300 ease-in-out cursor-pointer"
+      >
+        <div id="dragBar" class="w-12 h-1.5 bg-gray-400 rounded-full mx-auto mb-3 cursor-pointer"></div>
+        <h1 class="text-xl font-semibold mb-3 leading-tight">Università Degli Studi Di Salerno</h1>
+        <div class="flex items-center space-x-6 mb-4 text-[#3c1f14] text-lg font-semibold">
+          <div class="flex items-center space-x-2">
+            <i class="far fa-star"></i>
+            <span>500pt.</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <i class="far fa-clock"></i>
+            <span>20 min</span>
+          </div>
+        </div>
+        <p class="text-[#6b3a2a] text-base leading-relaxed line-clamp-5" id="infoText">
+          L'Università degli Studi di Salerno è una università statale italiana
+          fondata nel 1968 a Salerno e con attuale sede principale a Fisciano, in
+          provincia di Salerno.
+        </p>
+      </div>
     </div>
   </div>
+
   <script>
     const infoBox = document.getElementById("infoBox");
     const dragBar = document.getElementById("dragBar");
@@ -97,19 +94,12 @@
     let expanded = true;
     let liked = false;
 
-    // Initialize expanded state
-    infoBox.style.maxHeight = "40%"; // Imposta un'altezza massima per il box delle informazioni
-    infoText.classList.remove("line-clamp-3");
-
-    // Toggle info box expand/collapse on dragBar or infoBox click
     function toggleInfoBox() {
       if (expanded) {
-        // Collapse
         infoBox.style.maxHeight = "7rem";
         infoText.classList.add("line-clamp-3");
         expanded = false;
       } else {
-        // Expand
         infoBox.style.maxHeight = "40%";
         infoText.classList.remove("line-clamp-3");
         expanded = true;
@@ -127,7 +117,6 @@
       }
     });
 
-    // Like button toggle
     likeBtn.addEventListener("click", (e) => {
       e.stopPropagation();
       liked = !liked;
@@ -143,11 +132,10 @@
       }
     });
 
-    // Back button navigation
     backBtn.addEventListener("click", (e) => {
       e.stopPropagation();
       window.location.href = "index.html";
     });
   </script>
 </body>
-</html>        
+</html>
