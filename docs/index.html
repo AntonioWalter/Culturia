@@ -17,10 +17,8 @@
      top: 50%;
      left: 50%;
      transform: translate(-50%, -50%);
-     width: 20px;
-     height: 20px;
-     background-color: red;
-     border-radius: 50%;
+     color: red;
+     font-size: 2rem; /* Dimensione dell'icona */
    }
   </style>
  </head>
@@ -28,7 +26,7 @@
   <div class="w-full max-w-md h-[900px] rounded-3xl overflow-hidden flex flex-col bg-white shadow-lg">
    <div class="relative flex-1 rounded-t-3xl overflow-hidden">
     <img alt="Satellite aerial view of a city with roads, buildings, and greenery" class="w-full h-full object-cover" height="900" src="https://storage.googleapis.com/a1aa/image/0468c6ca-a9f4-4e04-6ce7-acb585e06aa0.jpg" width="720"/>
-    <div class="marker"></div>
+    <i class="fas fa-map-marker-alt marker"></i> <!-- Icona di indicatore di posizione -->
     <form aria-label="Search location" class="absolute top-6 left-6 right-6 bg-white rounded-xl flex items-center px-4 py-3 shadow-lg" role="search">
      <i class="fas fa-search text-[#3B1F1F] text-xl"></i>
      <input aria-label="Search input" class="ml-3 w-full text-[#3B1F1F] text-lg font-normal placeholder-[#3B1F1F] focus:outline-none bg-transparent" placeholder="Search" type="search"/>
