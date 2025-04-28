@@ -46,7 +46,7 @@ Culturia è una piattaforma culturale pensata per:
 La repository è organizzata nelle seguenti sezioni:
 
 - `/documentazione` → Contiene la relazione di progetto completa, i file LaTeX, gli schemi, i casi d'uso.
-- `/prototipo` → Contiene il codice HTML/CSS del prototipo navigabile.
+- `/docs` → Contiene il codice HTML/CSS del prototipo navigabile.
 - `/mockup` → Contiene i file grafici dei mockup (es. schermate principali dell'app).
 - `/assets` → Raccolta di immagini, loghi e materiali multimediali utilizzati.
 - `/pitch` → Contenente il materiale di supporto alla presentazione del progetto culturia.
