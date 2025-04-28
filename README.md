@@ -57,7 +57,9 @@ La repository è organizzata nelle seguenti sezioni:
 
 ➡️ **[Clicca qui per esplorare il prototipo CULTURIA](https://www.figma.com/proto/IapCQBHNObgrZQn9gxHlQD/Untitled?node-id=12-134&p=f&t=8XCCQgDKqmkneZRQ-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=12%3A134)**  
 
-## 🚀 Sito vetrina
+---
+
+## 🔗 Come visualizzare il sito di Culturia
 
 ➡️ **[Clicca qui per visualizzare il sito di CULTURIA](https://antoniowalter.github.io/Culturia/index.html)**  
 
