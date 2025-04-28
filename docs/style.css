@@ -531,7 +531,7 @@ input {
   border-radius: 2rem;
   border: 0;
   background: #7a60ff;
-  background: linear-gradient(to left, #7a60ff, #cd9ffa);
+  background: linear-gradient(to left, var(--primary), var(--accent));
   cursor:pointer;
 }
 /* Contact Info */
