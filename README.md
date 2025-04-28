@@ -51,6 +51,7 @@ La repository è organizzata nelle seguenti sezioni:
 - `/mockup` → Contiene i file grafici dei mockup (es. schermate principali dell'app).
 - `/assets` → Raccolta di immagini, loghi e materiali multimediali utilizzati.
 - `/pitch` → Contenente il materiale di supporto alla presentazione del progetto culturia.
+- `/prototipo` → Contente il video rappresentativo del prototipo realizzato.
 
 ---
 
