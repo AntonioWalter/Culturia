@@ -12,6 +12,7 @@ Il progetto nasce all'interno dell'Hackathon DiCultHer 2025 come proposta innova
 - [Cos'è Culturia](#cosè-culturia)
 - [Struttura della repository](#struttura-della-repository)
 - [Come consultare il prototipo](#come-consultare-il-prototipo)
+- [Come visualizzare il sito di Culturia](#come-consultare-il-sito-di-culturia)
 - [Come consultare la documentazione](#come-consultare-la-documentazione)
 - [Tecnologie utilizzate](#tecnologie-utilizzate)
 - [Crediti e ringraziamenti](#crediti-e-ringraziamenti)
