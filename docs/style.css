@@ -284,7 +284,11 @@ h6 {
 }
 
 .video-overlay {
-  background: linear-gradient(to left, var(--primary), var(--accent));
+  background: linear-gradient(
+    to left,
+    rgba(139, 46, 22, 0.6), /* primary con 60% opacità */
+    rgba(196, 90, 73, 0.6)  /* accent con 60% opacità */
+  );
 }
 
 .video-section h3 {
