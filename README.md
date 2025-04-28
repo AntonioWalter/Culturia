@@ -3,7 +3,7 @@
 > **Culturia – Non è un luogo. È la tua storia!**
 
 Culturia è un'applicazione web progettata per valorizzare il patrimonio culturale locale attraverso la partecipazione attiva degli utenti.  
-Il progetto nasce all'interno dell'Hackathon DiCultHer 2025 come proposta innovativa per avvicinare ogni persona alla cultura dei piccoli borghi, favorendo accessibilità, racconto e scoperta.
+Il progetto nasce all'interno dell'Hackathon "Hackcultura 2025" come proposta innovativa per avvicinare ogni persona alla cultura, favorendo accessibilità, racconto e scoperta.
 
 ---
 
