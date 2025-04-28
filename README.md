@@ -25,8 +25,7 @@ Il progetto nasce all'interno dell'Hackathon "Hackcultura 2025" come proposta in
 - [Emmanuel De Luca](https://www.linkedin.com/in/emmanuel-de-luca/)
 - Gabriele di Palma
 
-Siamo un team di studenti appassionati dell'Università degli studi di Salerno, nel corso di Laurea Triennale di Informatica. 
-Crediamo che ogni piccolo borgo, ogni luogo nascosto, abbia una storia che merita di essere raccontata.  
+Siamo un team di studenti dell'Università degli studi di Salerno, del corso di Laurea Triennale di Informatica. 
 Abbiamo unito le nostre competenze digitali per dare vita a **Culturia**.
 
 ---
