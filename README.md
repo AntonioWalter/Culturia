@@ -46,7 +46,7 @@ Culturia è una piattaforma culturale pensata per:
 La repository è organizzata nelle seguenti sezioni:
 
 - `/documentazione` → Contiene la relazione di progetto completa, i file LaTeX, gli schemi, i casi d'uso.
-- `/docs` → Contiene il codice HTML/CSS del prototipo navigabile.
+- `/docs` → Contiene il codice di un sito realizzato come vetrina per il progetto.
 - `/mockup` → Contiene i file grafici dei mockup (es. schermate principali dell'app).
 - `/assets` → Raccolta di immagini, loghi e materiali multimediali utilizzati.
 - `/pitch` → Contenente il materiale di supporto alla presentazione del progetto culturia.
@@ -55,8 +55,12 @@ La repository è organizzata nelle seguenti sezioni:
 
 ## 🚀 Come consultare il prototipo
 
-➡️ **[Clicca qui per esplorare il prototipo CULTURIA](#)**  
-*(https://antoniowalter.github.io/Culturia/index.html)*
+➡️ **[Clicca qui per esplorare il prototipo CULTURIA](https://www.figma.com/proto/IapCQBHNObgrZQn9gxHlQD/Untitled?node-id=12-134&p=f&t=8XCCQgDKqmkneZRQ-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=12%3A134)**  
+
+## 🚀 Sito vetrina
+
+➡️ **[Clicca qui per visualizzare il sito di CULTURIA](https://antoniowalter.github.io/Culturia/index.html)**  
+
 
 
 ---
@@ -69,8 +73,8 @@ Tutti i passi progettuali sono illustrati all'interno del file pdf "Proposta Pro
 
 ## 🛠️ Tecnologie utilizzate
 
-- **HTML5 / CSS3** per il prototipo web
-- **Canva** e **Figma** per i mockup grafici
+- **HTML5 / CSS3 / Javascript ** per il sito vetrina
+- **Canva** e **Figma** per i mockup grafici ed il prototipo interattivo
 - **GitHub** per il versionamento collaborativo
 
 ---
