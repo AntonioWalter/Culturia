@@ -744,3 +744,29 @@ input {
     font-size: 10px;
   }
 }
+
+/* → Assicuriamoci che i link siano posizionati relativamente, così il ::after si ancorerà a loro */
+.navbar .nav-link {
+  position: relative;
+  padding-bottom: 5px; /* lascia un piccolo spazio per la underline */
+}
+
+/* → Pseudo-elemento che di default è nascosto */
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(to right, var(--primary), var(--accent));
+  border-radius: var(--radius);
+  transition: all 0.3s ease;
+}
+
+/* → Al hover si espande da centro verso i bordi */
+.navbar .nav-link:hover::after,
+.navbar .nav-item.active .nav-link::after {
+  left: 0;
+  width: 100%;
+}
