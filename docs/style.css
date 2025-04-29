@@ -269,6 +269,17 @@ h6 {
   margin-top: 30px;
   display: inline-block;
   font-size: 18px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.about-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.about-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 .about-btn:hover {
@@ -390,12 +401,15 @@ h6 {
 
 .team-detail {
   margin-top: 40px;
+
 }
 
 .team-detail img {
   border-radius: 50%;
   width: 70%;
 }
+
+
 
 .team-detail h4 {
   color: var(--accent);  /* Colore del nome del membro del team */
@@ -502,6 +516,7 @@ h6 {
 /* Centrare il form nella sezione Contact */
 #contact_form .form-input {
   border: 1px solid #e4e4e4;
+
 }
 input {
   height: 42px;
@@ -537,6 +552,25 @@ input {
   background: var(--primary);
   background: linear-gradient(to left, var(--primary), var(--accent));
   cursor:pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-grad:hover {
+  transform: translateY(-3px);           /* ✶ solleva un po’ il bottone */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* ✶ ombra più pronunciata */
+}
+
+.btn-grad:active {
+  transform: translateY(-1px);            /* ✶ effetto “press” più sottile */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* ✶ ombra ridotta */
+}
+
+.form-scuro{
+
+  background-color: rgb(252,252,252);      /* grigio scuro */
+  padding: 2rem;                  /* spazio interno */
+  border-radius: var(--radius);   /* usa il tuo border‐radius */
+  box-shadow: var(--shadow);
+
 }
 /* Contact Info */
 .contact-info {
@@ -744,7 +778,6 @@ input {
     font-size: 10px;
   }
 }
-
 /* → Assicuriamoci che i link siano posizionati relativamente, così il ::after si ancorerà a loro */
 .navbar .nav-link {
   position: relative;
