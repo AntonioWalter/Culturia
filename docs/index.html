@@ -328,6 +328,24 @@
     });
   });
 
+    // Gestisce il comportamento smooth scroll
+    $.scrollIt({
+    easing: 'swing',      // la funzione di easing per l'animazione
+    scrollTime: 900,      // tempo (in ms) che impiega l'animazione
+    activeClass: 'active', // classe attiva da assegnare all'elemento della nav
+    onPageChange: null,   // funzione da chiamare quando la pagina cambia
+    topOffset: -63        // spostamento in alto (usato per navbar fissa)
+  });
+
+    // Se vuoi aggiungere anche il comportamento per navigare automaticamente alla sezione corretta
+    $(document).ready(function() {
+    // Attiva il comportamento smooth scroll al click di ogni link nel menu
+    $('a[data-scroll-nav]').on('click', function (event) {
+      var target = $(this).attr('data-scroll-nav');
+      $.scrollTo(target, 900);  // imposta il tempo per il movimento della pagina
+      event.preventDefault();
+    });
+  });
 
 
 
